@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="225"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="YDz-Vf-7xp">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="8UC-xH-XDx" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HDM-rx-Z1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-19"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="psP-en-tYF">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="enM-gV-bzw" customClass="PageContentViewController" customModule="DemoPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LP4-xY-v6a"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qt4-xV-5Qo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fky-m6-Q9I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pE8-7A-zSh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uN5-PV-Gus">
+                                <rect key="frame" x="116" y="208" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qt4-xV-5Qo" firstAttribute="top" secondItem="pE8-7A-zSh" secondAttribute="bottom" id="8Uq-Yi-VxZ"/>
+                            <constraint firstItem="uN5-PV-Gus" firstAttribute="top" secondItem="pE8-7A-zSh" secondAttribute="topMargin" constant="200" id="Vx1-uq-7ve"/>
+                            <constraint firstItem="pE8-7A-zSh" firstAttribute="top" secondItem="fky-m6-Q9I" secondAttribute="top" id="cFv-Ol-9mt"/>
+                            <constraint firstAttribute="centerX" secondItem="uN5-PV-Gus" secondAttribute="centerX" id="fGg-HS-wlf"/>
+                            <constraint firstItem="pE8-7A-zSh" firstAttribute="leading" secondItem="fky-m6-Q9I" secondAttribute="leading" id="ga3-8a-eLf"/>
+                            <constraint firstAttribute="trailing" secondItem="pE8-7A-zSh" secondAttribute="trailing" id="hMs-5s-pAM"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgView" destination="pE8-7A-zSh" id="Ocl-Kf-BJS"/>
+                        <outlet property="lblTitle" destination="uN5-PV-Gus" id="Ql3-6j-QfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bY-Yd-UW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="601"/>
+        </scene>
+    </scenes>
+</document>
